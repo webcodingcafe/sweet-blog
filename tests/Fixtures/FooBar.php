@@ -7,6 +7,9 @@
 
 declare(strict_types=1);
 
-require __DIR__ . '/Autoloader.php';
+namespace Tests\Fixtures;
 
-(new \SweetBlog\Autoloader('SweetBlog', __DIR__))->register();
+/**
+ * Dummy class used in tests.
+ */
+final class FooBar {}
