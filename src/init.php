@@ -18,6 +18,8 @@ $router = new Router(
     new \SweetBlog\Core\Routes(),
 );
 
+$view = new \SweetBlog\Core\View(__DIR__ . '/views');
+
 try {
     $controllerClass = $router->resolve();
 
@@ -29,7 +31,7 @@ try {
         throw new Exception("Class {$controllerClass} does not have a __invoke method.");
     }
 
-    (new $controllerClass())();
+    (new $controllerClass($view))();
 } catch (\SweetBlog\Exception\HttpNotFoundException $e) {
     http_response_code(404);
     error_log($e->getMessage());

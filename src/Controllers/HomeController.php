@@ -9,11 +9,20 @@ declare(strict_types=1);
 
 namespace SweetBlog\Controllers;
 
+use SweetBlog\Core\View;
+
 /**
  * Class used to provide the home page.
  */
-final class HomeController
+final readonly class HomeController
 {
+    /**
+     * View constructor,
+     *
+     * @param View $view
+     */
+    public function __construct(private View $view) {}
+
     /**
      * Prints "Hello, world!" on the screen.
      *
@@ -21,19 +30,6 @@ final class HomeController
      */
     public function __invoke(): void
     {
-        echo <<<HTML
-            <!doctype html>
-            <html lang="en">
-            <head>
-            <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="assets/css/style.css" >
-                <title>Document</title>
-            </head>
-            <body>
-            <p>Hello, world!</p>
-            </body>
-            </html>
-            HTML;
+        $this->view->render('home');
     }
 }
