@@ -36,7 +36,7 @@ try {
     http_response_code(404);
     error_log($e->getMessage());
     echo '404 Not Found';
-} catch (Exception $e) {
+} catch (Throwable $e) {
     http_response_code(500);
     error_log($e->getMessage());
     echo 'Something went wrong.';
