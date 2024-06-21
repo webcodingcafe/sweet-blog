@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace SweetBlog\Core;
 
+use SweetBlog\Exception\MissingViewFileException;
+
 /**
  * Class used to load view files.
  */
@@ -30,18 +32,22 @@ final readonly class View
      * Loads the specified view file from the views directory.
      *
      * @param string $viewFileName File name of the view file
+     *
+     * @throws \SweetBlog\Exception\MissingViewFileException
      * @return void
      */
     public function render(string $viewFileName): void
     {
-        // TODO: Validate parameter $viewFilename
-
-        $viewFile = $this->viewsDirectory . \DIRECTORY_SEPARATOR . $viewFileName . '.php';
-
-        if (file_exists($viewFile)) {
-            require $viewFile;
+        if (\preg_match('#^[A-Za-z_\-]+$#', $viewFileName) !== 1) {
+            throw new \InvalidArgumentException('Invalid view file name.');
         }
 
-        // TODO: Throw an exception
+        $viewFile = $this->viewsDirectory . \DIRECTORY_SEPARATOR . \basename($viewFileName) . '.php';
+
+        if (!file_exists($viewFile)) {
+            throw new MissingViewFileException($viewFileName);
+        }
+
+        require $viewFile;
     }
 }

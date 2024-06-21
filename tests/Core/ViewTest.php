@@ -10,8 +10,10 @@ declare(strict_types=1);
 namespace Tests\Core;
 
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\TestWith;
 use PHPUnit\Framework\TestCase;
 use SweetBlog\Core\View;
+use SweetBlog\Exception\MissingViewFileException;
 
 #[CoversClass(View::class)]
 final class ViewTest extends TestCase
@@ -45,5 +47,33 @@ final class ViewTest extends TestCase
         $this->expectExceptionMessage('Invalid views directory path.');
 
         (new View('/non-existing/directory'));
+    }
+
+    #[TestWith(['file42'])]
+    #[TestWith(['foobar.php'])]
+    #[TestWith(['foo/bar'])]
+    public function testInvalidFileName(string $viewFileName): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Invalid view file name.');
+
+        $view = new View(\dirname(__DIR__) . '/Fixtures/views');
+
+        try {
+            $view->render($viewFileName);
+        } catch (MissingViewFileException $e) {
+            self::fail($e->getMessage());
+        }
+    }
+
+    public function testMissingViewFile(): void
+    {
+        $viewFileName = 'non-existing';
+
+        $this->expectException(MissingViewFileException::class);
+        $this->expectExceptionMessage("Missing view file: {$viewFileName}");
+
+        $view = new View(\dirname(__DIR__) . '/Fixtures/views');
+        $view->render($viewFileName);
     }
 }
