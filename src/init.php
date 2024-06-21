@@ -7,13 +7,11 @@
 
 declare(strict_types=1);
 
-use SweetBlog\Core\Router;
-
 require __DIR__ . '/Autoloader.php';
 
 (new \SweetBlog\Autoloader('SweetBlog', __DIR__))->register();
 
-$router = new Router(
+$router = new \SweetBlog\Core\Router(
     new \SweetBlog\Core\Request(),
     new \SweetBlog\Core\Routes(),
 );
