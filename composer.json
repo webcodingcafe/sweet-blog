@@ -31,7 +31,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\Integration\\": "tests/integration/",
+            "Tests\\Unit\\": "tests/unit/"
         }
     },
     "config": {
@@ -40,6 +41,7 @@
     },
     "scripts": {
         "stan": "phpstan analyse --no-ansi --no-progress",
-        "test": "phpunit --testsuite=default --colors=never --no-progress"
+        "test:integration": "phpunit --testsuite=integration --colors=never --no-progress",
+        "test:unit": "phpunit --testsuite=unit --colors=never --no-progress"
     }
 }
