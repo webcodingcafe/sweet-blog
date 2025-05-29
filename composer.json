@@ -1,0 +1,45 @@
+{
+    "name": "webcodingcafe/sweet-blog",
+    "description": "A sweet blog publishing application.",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Daniela Kleemann",
+            "email": "daniela@webcodingcafe.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "ext-mbstring": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.9",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpunit/phpunit": "^12.1",
+        "symfony/process": "^7.2"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "SweetBlog\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "stan": "phpstan analyse --no-ansi --no-progress",
+        "test": "phpunit --testsuite=default --colors=never --no-progress"
+    }
+}
