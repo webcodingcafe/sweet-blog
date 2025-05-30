@@ -1,0 +1,38 @@
+name: Bug Report
+description: File a bug report.
+labels: [ "bug" ]
+assignees:
+  - elakle
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: Tell us what doesn't work as expected.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expectation
+      description: Tell us what should have happened.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Describe what you did.
+    validations:
+      required: true
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional details
+      description: Provide any additional details that may be helpful to reproduce the bug.
+    validations:
+      required: false
