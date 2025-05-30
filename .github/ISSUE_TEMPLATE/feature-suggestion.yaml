@@ -1,0 +1,17 @@
+name: Feature Suggestion
+description: Suggest a new feature or improvement.
+labels: [ "suggestion" ]
+assignees:
+  - elakle
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to share your ideas!
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature description
+      description: Tell us about your idea.
+    validations:
+      required: true
