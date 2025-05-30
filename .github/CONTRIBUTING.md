@@ -1,0 +1,154 @@
+# Contributing Guidelines
+
+Welcome aboard!
+
+Thank you for considering contributing to the Sweet Blog project!
+
+All kinds of contributions are welcome, and they are greatly appreciated.
+Whether it's a bug report, feature request, or a pull request, it's great to
+have you on board. Please take a moment to review this document to make the
+contribution process easy and effective for everyone involved.
+
+If this is your first time contributing, don't hesitate to ask questions
+or reach out for help in the
+[Discussions](https://github.com/webcodingcafe/sweet-blog/discussions) section.
+
+## Code of Conduct
+
+Please read the [Code of Conduct](CODE_OF_CONDUCT.md) before
+contributing.
+
+By contributing to this project, you agree to abide by its terms and be a
+part of a welcoming and inclusive community.
+
+## License
+
+The project is licensed under the MIT License. You can review the license in the
+[LICENSE](../LICENSE) file.
+
+Your contribution will be licensed under the same license.
+
+## How to Contribute
+
+There are many ways to contribute to the project. Here are some examples:
+
+### Submit a Pull Request
+
+The best way to contribute code changes is by using the
+[fork and pull request workflow](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
+Here’s how:
+
+1. **Fork the repository**. Click the Fork button on this repository’s page to
+   create your own copy.
+2. **Clone your fork.** Use `git clone <your-fork-url>` to clone the forked
+   repository to your local machine.
+3. **Create a new branch.** It's best to create a new branch for each
+   contribution: `git checkout -b your-branch-name`
+4. **Make your changes.** Commit your work with clear, descriptive commit
+   messages.
+5. **Push to your fork.** You can use `git push origin your-branch-name` to push
+   your changes to your fork.
+6. **Submit a pull request.** Go to the original repository page and click the
+   **New pull request** button. Choose your branch and submit your changes for
+   review.
+7. **Collaborate.** Be open to feedback and make any necessary changes.
+
+After you submitted your pull request, automated tests will run to ensure that
+your changes don't break anything. Your contribution can be merged after it
+has been reviewed and approved. Please be patient.
+
+### Report a Bug
+
+If you encounter a bug, a bug report is a great way to improve the project.
+
+1. **Search first.** Check existing issues to see if the bug has already been
+   reported.
+2. **Open a new issue.** If the bug hasn't been reported yet, click **New
+   issue** and select the **Bug Report** template.
+3. **Describe the bug.** Provide clear and concise information about the bug:
+    * What you expected to happen
+    * What actually happened
+    * Steps to reproduce the bug
+4. **Include details.** Add relevant logs, screenshots, or error messages if
+   possible.
+5. **Submit the issue.** Click **Create** to submit your bug report.
+
+This helps to diagnose and fix the issue as quickly as possible.
+
+### Suggest a Feature
+
+If you have an idea for a new feature, a feature suggestion is a great way to
+contribute to the project.
+
+You can open a new issue and select the **Feature Suggestion** template, or
+[open a new discussion](https://github.com/webcodingcafe/sweet-blog/discussions/new?category=ideas)
+and tell the community about your idea.
+
+### Proofread the Documentation
+
+No human is perfect. If you find any typos or inaccuracies in the documentation,
+please submit a pull request or open an issue so they can be fixed.
+
+## Development Guidelines
+
+The project adheres to the
+[PER Coding Style 2.0](https://www.php-fig.org/per/coding-style/)
+for PHP code.
+
+## Testing
+
+All bug fixes and new features should be accompanied by automated tests.
+
+If you are not familiar with testing, don't worry! The community will guide
+you and answer any questions you may have.
+
+### System Requirements
+
+* PHP 8.4 or higher
+* Composer
+* MySQL or MariaDB
+
+### Install Development Tools
+
+This project uses Composer to manage development tools. You can install the
+development tools by running `composer install` in your terminal.
+
+### Update Development Tools
+
+From time to time, it's necessary to update the development tools. You can do
+this by running `composer update` in your terminal.
+
+Please note that this will change the `composer.lock` file. The `composer.
+lock` file is used to ensure that the same versions of the development tools
+are used by everyone.
+
+**Always update tools in a separate branch and submit a pull request.**
+Don't mix tool updates with other changes.
+
+### Run Tests
+
+You can run tests locally by running the following commands in your terminal:
+
+* Unit tests: `composer test:unit`
+* Integration tests: `composer test:integration`
+* Static analysis: `composer stan`
+
+## Using AI Tools
+
+AI tools can be helpful, but please use them thoughtfully. You are fully
+responsible for any code or changes generated by AI.
+
+Before asking AI to generate code or fix a bug, try to solve the problem
+yourself first. If you use AI-generated code, don't just copy and paste it.
+Treat it as an example. Try to fully understand it and reimplement it in your
+own code. This way, you keep the learning and enjoyment of coding intact.
+
+## Get Help
+
+You can reach out to our supportive community in the
+[Discussions](https://github.com/webcodingcafe/sweet-blog/discussions)
+section or ask for help directly in an issue or a pull request.
+
+## Thank You
+
+Thank you for your time and effort!
