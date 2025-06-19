@@ -8,7 +8,7 @@ use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\TestCase;
 
 #[CoversNothing]
-class SampleUnitTest extends TestCase
+final class SampleUnitTest extends TestCase
 {
     /**
      * @var bool true

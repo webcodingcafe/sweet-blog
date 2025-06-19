@@ -8,7 +8,7 @@ use PHPUnit\Framework\Attributes\CoversNothing;
 use Tests\BaseIntegrationTestCase;
 
 #[CoversNothing]
-class SampleIntegrationTest extends BaseIntegrationTestCase
+final class SampleIntegrationTest extends BaseIntegrationTestCase
 {
     public function testHttpRequest(): void
     {
