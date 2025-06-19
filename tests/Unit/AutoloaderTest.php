@@ -8,11 +8,13 @@ use InvalidArgumentException;
 use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PHPUnit\Framework\TestCase;
 use SweetBlog\Autoloader;
 
+#[RunTestsInSeparateProcesses]
 #[CoversClass(Autoloader::class)]
-class AutoloaderTest extends TestCase
+final class AutoloaderTest extends TestCase
 {
     private static string $fixtureDirectory;
 
