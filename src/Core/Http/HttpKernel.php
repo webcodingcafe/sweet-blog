@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace SweetBlog\Core\Http;
 
+use SweetBlog\App\Controllers\HomeController;
+
 /**
  * The HTTP request lifecycle.
  */
@@ -16,8 +18,6 @@ final readonly class HttpKernel
      */
     public function handle(): HttpResponse
     {
-        $httpResponseBody = new HttpResponseBody('Hello, world!');
-
-        return new HttpResponse($httpResponseBody);
+        return new HomeController()->index();
     }
 }
