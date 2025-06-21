@@ -66,6 +66,9 @@ final readonly class Autoloader
      */
     public function register(): void
     {
-        spl_autoload_register(callback: [$this, 'loadClass'], prepend: true);
+        spl_autoload_register(
+            callback: [$this, 'loadClass'],
+            prepend: true,
+        );
     }
 }

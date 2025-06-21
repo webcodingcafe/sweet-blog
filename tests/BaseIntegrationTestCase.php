@@ -58,11 +58,12 @@ abstract class BaseIntegrationTestCase extends TestCase
     private static function getRandomPort(): int
     {
         try {
-            $port = random_int(min: 8000, max: 8999);
-        } catch (RandomException $e) {
-            throw new RuntimeException(
-                sprintf('Failed to get random port number: %s', $e->getMessage()),
+            $port = random_int(
+                min: 8000,
+                max: 8999,
             );
+        } catch (RandomException $e) {
+            throw new RuntimeException(sprintf('Failed to get random port number: %s', $e->getMessage()));
         }
 
         return $port;
