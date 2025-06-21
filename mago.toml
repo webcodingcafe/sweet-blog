@@ -11,6 +11,14 @@ excludes = []
 print_width = 120
 tab_width = 4
 use_tabs = false
+inline_empty_anonymous_class_braces = true
+inline_empty_classlike_braces = true
+inline_empty_closure_braces = true
+inline_empty_constructor_braces = true
+inline_empty_control_braces = true
+inline_empty_function_braces = true
+inline_empty_method_braces = true
+null_type_hint = "Question"
 
 [linter]
 default_plugins = true
