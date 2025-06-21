@@ -16,13 +16,13 @@ final class HttpStatusCodeTest extends TestCase
     /**
      * @return \Generator<array{0: HttpStatusCode, 1: int}>
      */
-    public static function StatusCodeProvider(): Generator
+    public static function statusCodeProvider(): Generator
     {
         yield '200 OK' => [HttpStatusCode::Ok, 200];
         yield '404 Not Found' => [HttpStatusCode::NotFound, 404];
     }
 
-    #[DataProvider('StatusCodeProvider')]
+    #[DataProvider('statusCodeProvider')]
     public function testEnumCases(HttpStatusCode $statusCode, int $expected): void
     {
         $this->assertSame($expected, $statusCode->value);
