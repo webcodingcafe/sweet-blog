@@ -27,13 +27,17 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Tests\\Integration\\": "tests/Integration/",
+            "Tests\\Unit\\": "tests/Unit/"
         }
     },
     "scripts": {
         "cs:check": "php-cs-fixer check --diff --verbose",
         "cs:fix": "php-cs-fixer fix",
         "stan": "phpstan analyse",
-        "test": "phpunit"
+        "test": "phpunit",
+        "test:integration": "phpunit --testsuite Integration",
+        "test:unit": "phpunit --testsuite Unit"
     }
 }

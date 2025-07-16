@@ -10,8 +10,11 @@
          displayDetailsOnAllIssues="true"
          failOnAllIssues="true">
     <testsuites>
-        <testsuite name="default">
-            <directory>tests</directory>
+        <testsuite name="Integration">
+            <directory>tests/Integration</directory>
+        </testsuite>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
         </testsuite>
     </testsuites>
 
