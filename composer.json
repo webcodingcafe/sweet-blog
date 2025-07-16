@@ -29,5 +29,11 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "cs:check": "php-cs-fixer check --diff --verbose",
+        "cs:fix": "php-cs-fixer fix",
+        "stan": "phpstan analyse",
+        "test": "phpunit"
     }
 }
