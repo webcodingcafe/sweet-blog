@@ -32,5 +32,12 @@
             "Tests\\Integration\\": "tests/Integration/",
             "Tests\\Unit\\": "tests/Unit/"
         }
+    },
+    "scripts": {
+        "cs": "php-cs-fixer check --diff --verbose",
+        "stan": "phpstan analyse",
+        "test": "phpunit",
+        "test:integration": "phpunit --testsuite integration",
+        "test:unit": "phpunit --testsuite unit"
     }
 }
